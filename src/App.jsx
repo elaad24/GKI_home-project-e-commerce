@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import ProductsPage from "./components/ProductsPage";
 import PageNotFound404 from "./components/PageNotFound404";
+import ProductPage from "./components/ProductPage";
 
 function App() {
   return (
@@ -20,27 +21,35 @@ function App() {
           <Route path="/PageNotFound404" component={PageNotFound404} />
 
           <Route path="/home" component={Home} />
+
           <Route path="/ProductsPage" component={ProductsPage} />
+
           <Route
             path="/ProductsPage?category=clothing"
             component={ProductsPage}
           />
+
           <Route
             path="/ProductsPage?category=electronics"
             component={ProductsPage}
           />
+
           <Route
             path="/ProductsPage?category=contactus"
             component={ProductsPage}
           />
+
           <Route
             path="/ProductsPage?category=wishlist"
             component={ProductsPage}
           />
+
           <Route
             path="/ProductsPage?category=shoppingcart"
             component={ProductsPage}
           />
+
+          <Route path="/ProductPage" component={ProductPage} />
 
           <Redirect to="/PageNotFound404" />
         </Switch>

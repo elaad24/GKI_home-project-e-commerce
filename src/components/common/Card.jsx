@@ -5,17 +5,19 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Card = ({ image, title, category, price }) => {
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card mb-3" style={{ width: "18rem" }}>
       <img
         className="card-img-top"
         src={image}
         alt="Item image cap"
-        height="170"
+        height="160"
       />
-      <div className="card-body text-center">
-        <h4 className="card-title m-auto">
-          <b>{title}</b>
-        </h4>
+
+      <h6 className="card-title text-center title_text">
+        <b>{title}</b>
+      </h6>
+
+      <div className="card-body text-center  ">
         <h5>{category}</h5>
         <p>{price} $</p>
         <button className="btn btn-warning ">

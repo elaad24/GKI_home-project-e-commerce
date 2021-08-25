@@ -1,3 +1,19 @@
 .homeImage {
-  height: 55vh;
+  height: 53vh;
+  margin-bottom: 10px;
+}
+
+.title_text {
+  padding-top: 5px;
+  height: 50px;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.marginTop-20vh {
+  margin-top: 20vh;
 }
