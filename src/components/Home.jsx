@@ -1,52 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./common/Card";
+import { getAllProducts } from "../services/storeData";
 
 const Home = () => {
+  let [products, setProducts] = useState("");
+
+  useEffect(async () => {
+    const { data } = await getAllProducts();
+    setProducts(data);
+  });
+
+  let latestProdurts = [];
+  for (let i of products) {
+    if (i.id >= products.length - 4) {
+      latestProdurts.push(i);
+    }
+  }
   return (
     <div>
       <div className="d-flex justify-content-center">
         <img
           className="homeImage"
-          src="https://lh3.googleusercontent.com/proxy/ffuCNMIqt4N_lbvL9s4Jib8mHYHy2LKqVbMRddqXxT0zhT5OZU8_5_lju83zp1qcJyJw1i3tq4DyQS0xMg2Pszd7_NDX26y7_BsLN2PuJoZZuPyj3WdBIaRYqhEuQgaJIa8c3PHxaBhSPAU"
+          src="https://greatdrams.com/wp-content/uploads/2019/06/24139-big.png"
           alt=""
         />
       </div>
-      <div className="d-flex justify-content-center gap-4">
-        <Card
-          category="tech"
-          image="https://m.media-amazon.com/images/I/41UcDmmR7jL.jpg"
-          price="190"
-          title="New Phone"
-          key="1"
-        />
-        <Card
-          category="tech"
-          image="https://m.media-amazon.com/images/I/41UcDmmR7jL.jpg"
-          price="190"
-          title="New Phone"
-          key="1"
-        />
-        <Card
-          category="tech"
-          image="https://m.media-amazon.com/images/I/41UcDmmR7jL.jpg"
-          price="190"
-          title="New Phone"
-          key="1"
-        />
-        <Card
-          category="tech"
-          image="https://m.media-amazon.com/images/I/41UcDmmR7jL.jpg"
-          price="190"
-          title="New Phone"
-          key="1"
-        />
-        <Card
-          category="tech"
-          image="https://m.media-amazon.com/images/I/41UcDmmR7jL.jpg"
-          price="190"
-          title="New Phone"
-          key="1"
-        />
+
+      <div>
+        <h5 className="text-center ">
+          <b>LATEST PRODUCTS</b>
+        </h5>
+        <div className="d-flex justify-content-center gap-4 mt-3">
+          {latestProdurts.map((product) => (
+            <Card
+              category={product.category}
+              image={product.image}
+              price={product.price}
+              title={product.title}
+              key={product.id}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

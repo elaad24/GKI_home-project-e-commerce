@@ -5,7 +5,7 @@ const NavBar = ({ items }) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light shadow-sm">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link to="/home" className="navbar-brand">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_Milk_%26_Honey_Distillery.jpg"
             width="50"

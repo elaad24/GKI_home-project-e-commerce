@@ -1,0 +1,4 @@
+{
+  "ganeralApi": "https://fakestoreapi.com/products",
+  "byCategoryApi": "https://fakestoreapi.com/products/category/"
+}
