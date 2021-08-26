@@ -26,3 +26,8 @@
 .decoration-none:hover {
   color: black;
 }
+
+.productPageImg {
+  max-height: 450px;
+  max-width: 500px;
+}

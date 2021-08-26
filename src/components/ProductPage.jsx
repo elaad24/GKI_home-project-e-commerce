@@ -16,25 +16,24 @@ const ProductPage = () => {
   // describe the product itself
   let [product, setProduct] = useState("");
   // describe the amount in page
-  let [amount, setAmount] = useState("");
-
+  let [amountInPage, setAmountInPage] = useState(0);
   const url_string = window.location.href;
   const url = new URL(url_string);
   const id = url.searchParams.get("id");
 
-  /* let item;
-
   const shoppingCart = useSelector((state) => state.shoppingCart.products);
-  useEffect(async () => {
-    if (shoppingCart.length != 0) {
-      item = await shoppingCart.filter((prod) => prod.product.id == product.id);
-      await setAmount(item[0].qty);
-      if (item.length != 0) {
-        console.log(item[0].qty);
-        console.log("amount", amount);
-      }
+
+  let item;
+  let amount = 0;
+
+  if (shoppingCart.length != 0) {
+    item = shoppingCart.filter((prod) => prod.product.id == id);
+    if (item.length != 0) {
+      amount = item[0].qty;
     }
-  }, []); */
+  } else {
+    amount = 0;
+  }
 
   let category = product.category;
 
@@ -57,8 +56,12 @@ const ProductPage = () => {
       </div>
       <div className="container">
         <div className="d-flex  align-items-center justify-content-center marginTop-20vh gap-5">
-          <div className="">
-            <img src={product.image} alt="product image" height="450px" />
+          <div>
+            <img
+              className="productPageImg"
+              src={product.image}
+              alt="product image"
+            />
           </div>
 
           <div className="">
@@ -71,8 +74,8 @@ const ProductPage = () => {
             <h2>
               <b>Price: {product.price}$</b>
             </h2>
-            <Counter parentCallback={setAmount} qty={amount} />
-            <ButtonAddToCart product={product} qty={amount} />
+            <Counter parentCallback={setAmountInPage} qty={amount} />
+            <ButtonAddToCart product={product} qty={amountInPage} />
           </div>
         </div>
       </div>

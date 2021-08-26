@@ -4,13 +4,11 @@ import ButtonAddToCart from "./buttonAddToCart";
 import Counter from "./Counter";
 import { useSelector } from "react-redux";
 
-/*!!! need to add to button function to add to cart  */
-
 const Card = ({ id, image, title, category, price, qty, parentCallback }) => {
   const shoppingCart = useSelector((state) => state.shoppingCart.products);
 
   let item;
-  let amount;
+  let amount = 0;
 
   if (shoppingCart.length != 0) {
     item = shoppingCart.filter((prod) => prod.product.id == id);
@@ -39,7 +37,7 @@ const Card = ({ id, image, title, category, price, qty, parentCallback }) => {
       <div className="card-body text-center  ">
         <h5>{category}</h5>
         <p>{price} $</p>
-        <Counter parentCallback={parentCallback} qty={qty} />
+        <Counter parentCallback={parentCallback} qty={amount} />
         <ButtonAddToCart
           product={{ id, image, title, category, price }}
           qty={qty}

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./common/Card";
 import { getAllProducts } from "../services/storeData";
-import ButtonAddToCart from "./common/buttonAddToCart";
 
 const Home = () => {
   let [products, setProducts] = useState("");
