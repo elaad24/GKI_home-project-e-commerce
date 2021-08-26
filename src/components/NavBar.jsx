@@ -66,10 +66,7 @@ const NavBar = ({ items }) => {
             </div>
 
             <div className="nav-item">
-              <NavLink
-                to="/ProductsPage?category=contactus"
-                className="nav-link "
-              >
+              <NavLink to="/contactus" className="nav-link ">
                 Contact Us
               </NavLink>
             </div>

@@ -67,7 +67,7 @@ const ContactUs = () => {
             <div>
               <b>Tel</b>
             </div>
-            <div>16 HaThiya St. Tel Aviv-Yafo Israel</div>
+            <a href="tel:+97236320491">+972-3-6320491</a>
           </div>
         </div>
         <div>
