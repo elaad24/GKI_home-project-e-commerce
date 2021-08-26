@@ -22,10 +22,10 @@ const ButtonAddToCart = ({ product, qty }) => {
     await storeToLocalStorage(shoppingCart);
   };
   return (
-    <div>
+    <div className="btnAddToCartDiv">
       <button className="btn btn-warning " onClick={update}>
         <AiOutlineShoppingCart />
-        {" ADD TO CART"}
+        <div>ADD TO CART</div>
       </button>
     </div>
   );

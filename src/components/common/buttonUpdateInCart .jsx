@@ -26,9 +26,12 @@ const ButtonUpdateInCart = ({ product, qty }) => {
 
   return (
     <div>
-      <button className="btn btn-warning " onClick={update}>
+      <button
+        className="btn btn-warning btnUpdateShoppingCart"
+        onClick={update}
+      >
         <AiOutlineShoppingCart />
-        {" UPDATE"}
+        <span>UPDATE</span>
       </button>
     </div>
   );

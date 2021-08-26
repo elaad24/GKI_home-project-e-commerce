@@ -15,7 +15,7 @@ const RemoveBtn = ({ product }) => {
   };
 
   return (
-    <button className="btn btn-danger" onClick={remove}>
+    <button className="btn btn-danger removeBtn" onClick={remove}>
       remove
     </button>
   );

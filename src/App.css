@@ -41,3 +41,101 @@
   height: 20vh;
   max-width: 30vw;
 }
+.card_width {
+  width: 18rem;
+}
+
+.card-img-top {
+  height: 160px;
+}
+.full_width {
+  width: auto;
+}
+
+.cardDisplayShoppingCart {
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  .card-responsive {
+    width: 40%;
+  }
+  .card-img-top {
+    height: 150px;
+  }
+  .card-responsive > h6 {
+    font-size: 10px;
+  }
+
+  .card-body > h5,
+  p {
+    font-size: 12px;
+  }
+
+  .btn div {
+    font-size: 0.8rem;
+  }
+
+  .homeImage {
+    height: 21vh;
+    margin-bottom: 10px;
+  }
+
+  .productPage_rspinsive {
+    flex-direction: column;
+  }
+
+  .productPageImg {
+    max-height: 200px;
+    max-width: 225px;
+  }
+
+  .marginTop-20vh {
+    margin-top: 5%;
+  }
+
+  .productPage_rspinsive_text h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .productPage_rspinsive_text h6,
+  p {
+    text-align: center;
+  }
+  .productPage_rspinsive_text p {
+    font-size: 0.7rem;
+  }
+
+  .btnAddToCartDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  .shoppingCartResponsive {
+  }
+
+  .cardDisplayShoppingCart {
+    flex-direction: column;
+  }
+
+  .shoppingCartTextBox h5 {
+    font-size: 1rem;
+  }
+
+  .removeBtn {
+    align-self: center;
+    width: fit-content;
+  }
+
+  .btnUpdateShoppingCart span {
+    font-size: 0.9rem;
+  }
+
+  .summeryShoppingCart h2 {
+    font-size: 1.5rem;
+  }
+
+  .summeryShoppingCart > div > button > b {
+    font-size: 0.83rem;
+  }
+}

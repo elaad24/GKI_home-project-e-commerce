@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className=" container d-flex justify-content-center gap-4 flex-wrap ">
+      <div className=" container d-flex justify-content-center gap-4 flex-wrap productsPage_rspinsive">
         {ProductByCategory.map((product) => (
           <Card
             id={product.id}

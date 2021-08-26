@@ -22,7 +22,7 @@ const ShoppingCart = () => {
   let amount = 0;
 
   return (
-    <div className="container d-flex flex-column justify-content-center my-5 text-center">
+    <div className="container d-flex flex-column justify-content-center my-5 text-center ">
       <h1>
         <b>
           <span>Order</span> <span className="text-warning">Summary</span>
@@ -32,7 +32,7 @@ const ShoppingCart = () => {
       <div className="border">
         <div className="container">
           {shoppingCart.map((product) => (
-            <div className="d-flex align-items-center justify-content-around my-5 gap-5">
+            <div className="d-flex align-items-center justify-content-around my-5 gap-5 shoppingCartResponsive">
               <div className="">
                 <img
                   className="shoppingCartImage"
@@ -42,7 +42,7 @@ const ShoppingCart = () => {
               </div>
 
               <div className="shoppingCartTextBox">
-                <div className="d-flex flex-row-reverse gap-3">
+                <div className="d-flex  gap-3 cardDisplayShoppingCart">
                   <RemoveBtn product={product} />
                   <h5>
                     <b>{product.product.title}</b>
@@ -65,7 +65,7 @@ const ShoppingCart = () => {
       </div>
       <hr />
       <div className="container">
-        <div className="d-flex justify-content-between gap-2">
+        <div className="d-flex justify-content-between gap-2 summeryShoppingCart">
           <div className=" d-flex gap-2">
             <div className=" text-warning">
               <h2>

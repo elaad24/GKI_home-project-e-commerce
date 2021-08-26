@@ -26,11 +26,11 @@ const Home = () => {
         />
       </div>
 
-      <div>
+      <div className="full_width">
         <h5 className="text-center ">
           <b>LATEST PRODUCTS</b>
         </h5>
-        <div className="d-flex justify-content-center gap-4 mt-3">
+        <div className="d-flex justify-content-center gap-2 mt-3">
           {latestProdurts.map((product) => (
             <Card
               id={product.id}

@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = ({ items }) => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container">
         <Link to="/home" className="navbar-brand">
           <img
@@ -15,11 +15,11 @@ const NavBar = ({ items }) => {
         </Link>
 
         <button
-          className="navbar-toggler collapsed"
+          className="navbar-toggler "
           type="button"
           data-toggle="collapse"
-          data-target="#navbarsExample03"
-          aria-controls="navbarsExample03"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -28,7 +28,7 @@ const NavBar = ({ items }) => {
 
         <div
           className="collapse navbar-collapse justify-content-around"
-          id="navbarsExample03"
+          id="navbarNavAltMarkup"
         >
           <div></div>
           <div className="navbar-nav ">

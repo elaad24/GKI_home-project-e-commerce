@@ -20,14 +20,9 @@ const Card = ({ id, image, title, category, price, qty, parentCallback }) => {
   }
 
   return (
-    <div className="card mb-3 decoration-none" style={{ width: "18rem" }}>
+    <div className="card mb-3 decoration-none card_width card-responsive">
       <Link to={`/ProductPage?id=${id}`}>
-        <img
-          className="card-img-top"
-          src={image}
-          alt="Item image cap"
-          height="160"
-        />
+        <img className="card-img-top" src={image} alt="Item image cap" />
       </Link>
 
       <h6 className="card-title text-center title_text">

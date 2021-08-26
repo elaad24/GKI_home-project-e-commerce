@@ -55,7 +55,7 @@ const ProductPage = () => {
         </Link>
       </div>
       <div className="container">
-        <div className="d-flex  align-items-center justify-content-center marginTop-20vh gap-5">
+        <div className="d-flex  align-items-center justify-content-center marginTop-20vh gap-5 productPage_rspinsive ">
           <div>
             <img
               className="productPageImg"
@@ -64,18 +64,21 @@ const ProductPage = () => {
             />
           </div>
 
-          <div className="">
-            <h2>
+          <div className="d-flex flex-column  productPage_rspinsive_text">
+            <h2 className="align-self-center">
               <b>{product.title}</b>
             </h2>
-            <h6>{product.category}</h6>
+            <h6 className="align-self-center">{product.category}</h6>
 
-            <p>{product.description}</p>
-            <h2>
+            <p className="text-center flex-wrap">{product.description}</p>
+            <h2 className="align-self-center">
               <b>Price: {product.price}$</b>
             </h2>
             <Counter parentCallback={setAmountInPage} qty={amount} />
-            <ButtonAddToCart product={product} qty={amountInPage} />
+            <div className="align-self-center">
+              <ButtonAddToCart product={product} qty={amountInPage} />
+            </div>
+            <div className="productPage_rspinsive_text"></div>
           </div>
         </div>
       </div>
