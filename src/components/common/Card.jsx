@@ -10,7 +10,7 @@ const Card = ({ id, image, title, category, price, qty, parentCallback }) => {
   let item;
   let amount = 0;
 
-  if (shoppingCart.length != 0) {
+  if (shoppingCart.length > 0) {
     item = shoppingCart.filter((prod) => prod.product.id == id);
     if (item.length != 0) {
       amount = item[0].qty;

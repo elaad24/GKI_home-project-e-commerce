@@ -20,9 +20,17 @@ export const ShoppingCartSlice = createSlice({
       }
       state.products = temp;
     },
+    setStoreData: (state, action) => {
+      const product = action.payload;
+      console.log(product);
+      if (product == "") {
+      } else if (product != "") {
+        state.products = [...state.products, product];
+      }
+    },
   },
 });
 
-export const { addItem, removeItem } = ShoppingCartSlice.actions;
+export const { addItem, removeItem, setStoreData } = ShoppingCartSlice.actions;
 
 export default ShoppingCartSlice.reducer;

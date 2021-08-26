@@ -1,6 +1,8 @@
 import "./App.css";
 import { Router, Switch, Route, Redirect } from "react-router";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setStoreData } from "./redux/slices/shoppingCartSlice";
+import { storeFromLocalStorage } from "./function";
 
 //components
 import NavBar from "./components/NavBar";
@@ -9,8 +11,16 @@ import ProductsPage from "./components/ProductsPage";
 import PageNotFound404 from "./components/PageNotFound404";
 import ProductPage from "./components/ProductPage";
 import ShoppingCart from "./components/ShoppingCart";
+import { useEffect } from "react";
+
 function App() {
   const shoppingCart = useSelector((state) => state.shoppingCart.products);
+  const dispatch = useDispatch();
+
+  /* useEffect(() => {
+    const data = storeFromLocalStorage();
+    setInterval(dispatch(setStoreData(...data)), 3000);
+  }, []); */
 
   return (
     <div className="d-flex flex-column min-vh-100">
