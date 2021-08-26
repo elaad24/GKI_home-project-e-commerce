@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import Counter from "./common/Counter";
 import ButtonUpdateInCart from "./common/buttonUpdateInCart ";
 import RemoveBtn from "./common/RemoveBtn";
-import { removeItem } from "../redux/slices/shoppingCartSlice";
 
 const ShoppingCart = () => {
   const shoppingCart = useSelector((state) => state.shoppingCart.products);
@@ -12,7 +11,7 @@ const ShoppingCart = () => {
   for (let i of shoppingCart) {
     totalPrice += i.product.price * i.qty;
   }
-  //
+
   // describe the product itself
   let [product, setProduct] = useState("");
   // describe the amount in page

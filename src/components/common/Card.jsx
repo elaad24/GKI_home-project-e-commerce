@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ButtonAddToCart from "./buttonAddToCart";
-import Counter from "./Counter";
 import { useSelector } from "react-redux";
 
 const Card = ({ id, image, title, category, price, qty, parentCallback }) => {

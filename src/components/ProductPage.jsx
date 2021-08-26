@@ -38,10 +38,8 @@ const ProductPage = () => {
   let category = product.category;
 
   if (category == "men's clothing") {
-    console.log(category == "men's clothing");
     category = "clothing";
   } else if (category == "women's clothing") {
-    console.log(category == "women's clothing");
     category = "clothing";
   }
 

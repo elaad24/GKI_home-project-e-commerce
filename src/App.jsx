@@ -1,8 +1,6 @@
 import "./App.css";
-import { Router, Switch, Route, Redirect } from "react-router";
+import { Switch, Route, Redirect } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import { setStoreData } from "./redux/slices/shoppingCartSlice";
-import { storeFromLocalStorage } from "./function";
 
 //components
 import NavBar from "./components/NavBar";
@@ -11,7 +9,6 @@ import ProductsPage from "./components/ProductsPage";
 import PageNotFound404 from "./components/PageNotFound404";
 import ProductPage from "./components/ProductPage";
 import ShoppingCart from "./components/ShoppingCart";
-import { useEffect } from "react";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/footer";
 

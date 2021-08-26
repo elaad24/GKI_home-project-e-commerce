@@ -1,7 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { storeFromLocalStorage, storeToLocalStorage } from "../../function";
+import { storeToLocalStorage } from "../../function";
 import { removeItem } from "../../redux/slices/shoppingCartSlice";
 
 const RemoveBtn = ({ product }) => {

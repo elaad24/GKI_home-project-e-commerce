@@ -22,7 +22,6 @@ export const ShoppingCartSlice = createSlice({
     },
     setStoreData: (state, action) => {
       const product = action.payload;
-      console.log(product);
       if (product == "") {
       } else if (product != "") {
         state.products = [...state.products, product];
