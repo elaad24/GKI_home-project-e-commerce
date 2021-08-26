@@ -2,29 +2,60 @@ import React, { useEffect, useState } from "react";
 import { getProductByID } from "../services/storeData";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// need to add function to btn to add to cart
+import ButtonAddToCart from "./common/buttonAddToCart";
+import Counter from "./common/Counter";
+import { useSelector } from "react-redux";
+
 const ProductPage = () => {
-  let [product, setProduct] = useState("");
-
-  const url_string = window.location.href;
-  const url = new URL(url_string);
-  const id = url.searchParams.get("id");
-
   useEffect(async () => {
     const { data } = await getProductByID(id);
     setProduct(data);
   }, []);
 
+  //
+  // describe the product itself
+  let [product, setProduct] = useState("");
+  // describe the amount in page
+  let [amount, setAmount] = useState("");
+
+  const url_string = window.location.href;
+  const url = new URL(url_string);
+  const id = url.searchParams.get("id");
+
+  /* let item;
+
+  const shoppingCart = useSelector((state) => state.shoppingCart.products);
+  useEffect(async () => {
+    if (shoppingCart.length != 0) {
+      item = await shoppingCart.filter((prod) => prod.product.id == product.id);
+      await setAmount(item[0].qty);
+      if (item.length != 0) {
+        console.log(item[0].qty);
+        console.log("amount", amount);
+      }
+    }
+  }, []); */
+
+  let category = product.category;
+
+  if (category == "men's clothing") {
+    console.log(category == "men's clothing");
+    category = "clothing";
+  } else if (category == "women's clothing") {
+    console.log(category == "women's clothing");
+    category = "clothing";
+  }
+
   return (
     <div className="">
       <div>
-        <Link to={`/ProductsPage?category=${product.category}`}>
+        <Link to={`/ProductsPage?category=${category}`}>
           <button className="btn">
             <FaArrowLeft /> <b> Back To {product.category}</b>
           </button>
         </Link>
       </div>
-      <div className="">
+      <div className="container">
         <div className="d-flex  align-items-center justify-content-center marginTop-20vh gap-5">
           <div className="">
             <img src={product.image} alt="product image" height="450px" />
@@ -40,9 +71,8 @@ const ProductPage = () => {
             <h2>
               <b>Price: {product.price}$</b>
             </h2>
-            <button className="btn btn-warning ">
-              <b>ADD TO CART</b>
-            </button>
+            <Counter parentCallback={setAmount} qty={amount} />
+            <ButtonAddToCart product={product} qty={amount} />
           </div>
         </div>
       </div>

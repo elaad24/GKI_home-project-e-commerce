@@ -33,6 +33,7 @@ const Home = () => {
         <div className="d-flex justify-content-center gap-4 mt-3">
           {latestProdurts.map((product) => (
             <Card
+              id={product.id}
               category={product.category}
               image={product.image}
               price={product.price}

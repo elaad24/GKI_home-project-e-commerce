@@ -17,3 +17,12 @@
 .marginTop-20vh {
   margin-top: 20vh;
 }
+
+.decoration-none {
+  text-decoration: none;
+  color: black;
+}
+
+.decoration-none:hover {
+  color: black;
+}
