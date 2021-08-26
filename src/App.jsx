@@ -12,6 +12,8 @@ import PageNotFound404 from "./components/PageNotFound404";
 import ProductPage from "./components/ProductPage";
 import ShoppingCart from "./components/ShoppingCart";
 import { useEffect } from "react";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/footer";
 
 function App() {
   const shoppingCart = useSelector((state) => state.shoppingCart.products);
@@ -66,9 +68,15 @@ function App() {
 
           <Route path="/shoppingCart" component={ShoppingCart} />
 
+          <Route path="/contactus" component={ContactUs} />
+
           <Redirect to="/PageNotFound404" />
         </Switch>
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

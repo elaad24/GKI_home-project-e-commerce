@@ -1,5 +1,5 @@
 .homeImage {
-  height: 53vh;
+  height: 40vh;
   margin-bottom: 10px;
 }
 
@@ -54,6 +54,11 @@
 
 .cardDisplayShoppingCart {
   flex-direction: row-reverse;
+}
+
+.map {
+  border: black 1px solid;
+  border-radius: 25px;
 }
 @media screen and (min-width: 400px) and (max-width: 900px) {
   .card-responsive {
@@ -137,5 +142,11 @@
 
   .summeryShoppingCart > div > button > b {
     font-size: 0.83rem;
+  }
+  .map {
+    border: black 1px solid;
+    border-radius: 25px;
+    width: "200px";
+    height: "225px";
   }
 }
