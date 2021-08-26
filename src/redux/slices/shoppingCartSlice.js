@@ -12,9 +12,13 @@ export const ShoppingCartSlice = createSlice({
     },
     // remove item from shopping cart
     removeItem: (state, action) => {
-      state.products = state.products.filter(
-        (product) => product != action.payload
-      );
+      let temp = [];
+      for (let i = 0; i < state.products.length; i++) {
+        if (state.products[i].product.id !== action.payload.product.id) {
+          temp.push(state.products[i]);
+        }
+      }
+      state.products = temp;
     },
   },
 });
@@ -22,11 +26,3 @@ export const ShoppingCartSlice = createSlice({
 export const { addItem, removeItem } = ShoppingCartSlice.actions;
 
 export default ShoppingCartSlice.reducer;
-
-// in front -
-// check if item inside a store
-// -> in store
-// if wanna increase/decrese - calc the amount of total qty , remove the item from
-// the store and add the new item with the new qty to store .
-// -> not in store
-// add item to store
