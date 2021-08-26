@@ -1,6 +1,6 @@
 import "./App.css";
 import { Router, Switch, Route, Redirect } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 //components
 import NavBar from "./components/NavBar";

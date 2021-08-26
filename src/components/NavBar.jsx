@@ -77,18 +77,12 @@ const NavBar = ({ items }) => {
 
           <div className="navbar-nav ml-5 ">
             <div className="nav-item">
-              <NavLink
-                to="/ProductsPage?category=wishlist"
-                className="nav-link "
-              >
+              <NavLink to="/wishlist" className="nav-link ">
                 WishList ({items})
               </NavLink>
             </div>
             <div className="nav-item">
-              <NavLink
-                to="/ProductsPage?category=shoppingcart"
-                className="nav-link "
-              >
+              <NavLink to="/shoppingcart" className="nav-link ">
                 Shopping Cart ({items})
               </NavLink>
             </div>

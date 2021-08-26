@@ -37,7 +37,7 @@ const Card = ({ id, image, title, category, price, qty, parentCallback }) => {
       <div className="card-body text-center  ">
         <h5>{category}</h5>
         <p>{price} $</p>
-        <Counter parentCallback={parentCallback} qty={amount} />
+
         <ButtonAddToCart
           product={{ id, image, title, category, price }}
           qty={qty}
